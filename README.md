@@ -1,4 +1,4 @@
-# Zinc-CMS
+[logo]
 A robust web based Content Managment System, built on Node.js, Express 4, and Angular 2
 
 ## Description
@@ -9,3 +9,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Sources
 [Google](https://www.google.com)
+
+
+[logo]: /Zinc-CMS/zban.png "Zinc Logo"
