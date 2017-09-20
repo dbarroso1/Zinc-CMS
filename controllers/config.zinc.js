@@ -1,7 +1,12 @@
-// Zinc Config File
+/**
+ *  Zinc-CRM Configigurations File
+ */
+
+// Server Variables
 var sv_url = ''
 var sv_host = '127.0.0.1'
-var sv_port = normalizePort(process.env.PORT || 4200);
+var sv_port = normalizePort(process.env.PORT || 4200)
+// Database Variables
 var db_host = ''
 var db_port = normalizePort(process.env.PORT || 27107);
 var db_url = ('mongodb://' + db_host + ':' + db_port || db_altUrl)

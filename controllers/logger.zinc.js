@@ -1,4 +1,6 @@
-// Zinc Error Handler and Logger
+/**
+ * Zinc Error Handler and Logger 
+ */
 
 // Event listener for HTTP server "error" event.
 function onError(error) {
