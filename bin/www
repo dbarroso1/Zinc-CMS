@@ -1,17 +1,19 @@
 #!/usr/bin/env node
 const app = require('../server.zinc'), debug = require('debug')('zinc-cms:server'), http = require('http'), mongoose = require('mongoose');
 const config = require('../controllers/config.zinc'), log = require('../controllers/logger.zinc')
-const port = config.sv_port, host = config.sv_host, server = http.createServer(app);
+ 
+var server = http.createServer(app)
 
 // Mongoose Connetion Goes Here
 mongoose.connect(config.db_altUrl, { useMongoClient: true })
-mongoose.connection.on('open', (err) => {
-  console.log("mongoDB Connected")
-}).on('error', (err) => { process.exit(1) })
+  .on('open', (err) => { 
+    //replace for logger function
+    console.log("mongoDB Connected") })
+  .on('error', (err) => { process.exit(1) })
   .on('disconnected', (err) => { process.exit(0) })
 
 // Listen on provided port, on all network interfaces.
-server.listen(port, host)
+server.listen(config.sv_port, config.sv_host)
   .on('error', log.onError)
   .on('listening', () => {
     var addr = server.address();
@@ -19,6 +21,7 @@ server.listen(port, host)
       ? 'pipe ' + addr
       : 'port ' + addr.port;
     debug('Listening on ' + bind);
-    console.log('Express has started on ' + host + ':' + port)
+    //replace for logger function
+    console.log('Express has started on ' + config.sv_host + ':' + config.sv_port) 
   });
 
