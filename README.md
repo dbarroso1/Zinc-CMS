@@ -11,4 +11,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 [Google](https://www.google.com)
 
 
-[logo]: /Zinc-CMS/zban.png "Zinc Logo"
+[logo]: https://github.com/dbarroso1/Zinc-CMS/blob/master/zban.png?raw=true "Zinc Logo"
