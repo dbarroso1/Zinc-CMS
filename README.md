@@ -1,4 +1,6 @@
 ![alt text][logo]
+
+# Zinc CMS
  A robust web based Content Managment System, built on Node.js, Express 4, and Angular 2
 
 ## Description
