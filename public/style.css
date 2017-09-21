@@ -1,8 +1,48 @@
+@font-face { font-family: RetroMex; src: url('fonts/mexcellent rg.ttf') } 
 body {
-  padding: 50px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #272727;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden
+}
+footer{
+  background: #000000;
+  padding: 6px;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  text-align: right;
+}
+footer img{
+  vertical-align: middle;
+  padding: 10px;
 }
 
 a {
   color: #00B7FF;
+}
+div#wrapper{
+  color: white;
+  width: 50%;
+  padding: 2.5% 25%;
+}
+h2::before{
+  content: "|";
+  width: 32px;
+  height: 16px;
+  background: #424242; 
+  color: #424242;
+}
+div #logo{
+  font-family: RetroMex;
+  font-size: 48px;
+  text-align: center
+}
+a {
+  text-decoration: none;
+  color: #678AFF;
+  transition: 300ms
+} a:hover {
+  color: #52F094
 }
