@@ -3,6 +3,8 @@ const cookieParser = require('cookie-parser'), bodyParser = require('body-parser
 const api = require('./controllers/api.zinc')
 
 const app = express();
+const log = require('./controllers/logger.zinc')
+
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json(), bodyParser.urlencoded({ extended: false }));

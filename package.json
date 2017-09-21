@@ -7,12 +7,14 @@
   },
   "dependencies": {
     "body-parser": "~1.17.1",
+    "chalk": "^2.1.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "express": "~4.15.2",
     "mongoose": "^4.11.12",
     "morgan": "~1.8.1",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "terminal-kit": "^1.13.11"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"

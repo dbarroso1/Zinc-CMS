@@ -1,7 +1,22 @@
 /**
  * Zinc Error Handler and Logger 
+ * Find what the Morgan Package does and how to manipulate 
+ * it to work for Zinc wit Zinc Tag (=>) at least
  */
+const term = require('terminal-kit').terminal, chalk = require('chalk')
 
+var tag = chalk.red('=> '),
+  nxt = '\n', note = "Hello World"
+
+function motd() {
+  note = message
+  zincLogger(note)
+}
+
+function zincLogger(note) {
+  var output = term(tag + note + nxt)
+  return output
+}
 // Event listener for HTTP server "error" event.
 function onError(error) {
   if (error.syscall !== 'listen') { throw error; }
@@ -24,4 +39,4 @@ function onError(error) {
   }
 }
 
-module.exports = { onError }
+module.exports = { onError, zincLogger }
