@@ -1,15 +1,19 @@
 #!/usr/bin/env node
-const app = require('../server.zinc'), debug = require('debug')('zinc-cms:server'), http = require('http'), mongoose = require('mongoose');
+const zinc = require('../server.zinc'),
+  debug = require('debug')('zinc-cms:server'),
+  http = require('http'),
+  mongoose = require('mongoose');
+
 const config = require('../controllers/config.zinc'),
   log = require('../controllers/logger.zinc')
 
-var server = http.createServer(app)
+var server = http.createServer(zinc)
 
 // Mongoose Connetion Goes Here
 mongoose.connect(config.db_altUrl, { useMongoClient: true })
   .on('open', (err) => {
     //replace for logger function
-    var note = 'MongoDB Has connected and is listening on ' + config.db_host + ':' + config.db_port    
+    var note = 'MongoDB Has connected and is listening on ' + config.db_host + ':' + config.db_port
     log.zincLogger(note)
   })
   .on('error', (err) => { process.exit(1) })
