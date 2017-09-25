@@ -2,9 +2,12 @@ const express = require('express'), router = express.Router(), mongoose = requir
 
 router.get('/', function (req, res) {
     res.send({
-        title : 'Zinc-CMS',
-        version : '0.0.1'
+        title: 'Zinc-CMS',
+        author: 'D. Barroso',
+        version: '0.0.1',
+        GitHub: 'https://github.com/dbarroso/Zinc-CMS'
     })
 })
 
-module.exports = router //exports everything we're doing
+// exports everything we're doing
+module.exports = router

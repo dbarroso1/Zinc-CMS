@@ -7,7 +7,7 @@ var sv_url = ''
 var sv_host = '127.0.0.1'
 var sv_port = normalizePort(process.env.PORT || 4200)
 // Database Variables
-var db_host = ''
+var db_host = '' || 'Mongo Atlas URL'
 var db_port = normalizePort(process.env.PORT || 27107);
 var db_url = ('mongodb://' + db_host + ':' + db_port || db_altUrl)
 var db_altUrl = 'mongodb://dbarroso:vfoWhIDuItZCGCKX@database-shard-00-00-xalpg.mongodb.net:27017,database-shard-00-01-xalpg.mongodb.net:27017,database-shard-00-02-xalpg.mongodb.net:27017/Zinc?ssl=true&replicaSet=database-shard-0&authSource=admin'

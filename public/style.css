@@ -4,15 +4,19 @@ body {
   background: #272727;
   height: 100vh;
   margin: 0 auto;
-  overflow: hidden
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-bottom: 128px;
 }
 footer{
   background: #000000;
-  padding: 6px;
+  padding: 8px;
   position: fixed;
   bottom: 0;
-  width: 100vw;
-  text-align: right;
+  width: 100%;
+} footer #right{
+  float: right;
+  padding-left: 200px;
 }
 footer img{
   vertical-align: middle;

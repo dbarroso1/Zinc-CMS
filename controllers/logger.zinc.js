@@ -5,15 +5,23 @@
  */
 const term = require('terminal-kit').terminal, chalk = require('chalk')
 
-var tag = chalk.red('=> '),
+var tag = chalk.blue('=> '),
   nxt = '\n', note = "Hello World"
 
 function motd() {
   note = message
-  zincLogger(note)
+  var message = term(
+  "+-----------------------------------+" + nxt +
+  "|XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX|" + nxt +
+  "|  ZINC-CSM                 v0.0.0  |" + nxt +
+  "|                                   |" + nxt +
+  "| https://github.com/dbarroso1/Zinc |" + nxt +
+  "|XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX|" + nxt +
+  "+-----------------------------------+" + nxt)
 }
 
 function zincLogger(note) {
+  var err = note
   var output = term(tag + note + nxt)
   return output
 }
@@ -39,4 +47,4 @@ function onError(error) {
   }
 }
 
-module.exports = { onError, zincLogger }
+module.exports = { onError, zincLogger, motd }

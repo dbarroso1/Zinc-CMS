@@ -8,7 +8,7 @@ const config = require('../controllers/config.zinc'),
   log = require('../controllers/logger.zinc')
 
 var server = http.createServer(zinc)
-
+log.motd()
 // Mongoose Connetion Goes Here
 mongoose.connect(config.db_altUrl, { useMongoClient: true })
   .on('open', (err) => {
