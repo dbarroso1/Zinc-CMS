@@ -1,6 +1,6 @@
 const express = require('express'), router = express.Router(), mongoose = require('mongoose')
 
-router.get('/', function (req, res) {
+router.get('/api', function (req, res) {
     res.send({
         title: 'Zinc-CMS',
         author: 'D. Barroso',

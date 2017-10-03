@@ -11,6 +11,9 @@ var db_host = '' || 'Mongo Atlas URL'
 var db_port = normalizePort(process.env.PORT || 27107);
 var db_url = ('mongodb://' + db_host + ':' + db_port || db_altUrl)
 var db_altUrl = 'mongodb://dbarroso:vfoWhIDuItZCGCKX@database-shard-00-00-xalpg.mongodb.net:27017,database-shard-00-01-xalpg.mongodb.net:27017,database-shard-00-02-xalpg.mongodb.net:27017/Zinc?ssl=true&replicaSet=database-shard-0&authSource=admin'
+// Directory Paths Variables 
+var public = 'public' 
+var favicon = 'favicon.ico'
 
 // Normalize a port into a number, string, or false.
 function normalizePort(val) {
