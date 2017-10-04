@@ -1,5 +1,6 @@
 # Zinc Stuff
 package-lock.json*
+_config.yml*
 
 # Logs
 logs
