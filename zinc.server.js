@@ -12,7 +12,8 @@ mongoose.connect(zn.database.atlas, { useMongoClient: true })
     .on('open', (err, next) => { msg.log('Zinc is now listening for Database on Port ' + zn.database.port) })
     .on('error', (err, next) => { msg.log(msg, error = 'Uh, Oh there was an Error' + err); process.exit(1) })
     .on('disconnected', (err, next) => { msg.log(msg, error = err + ' Failed to connect to Database, Exiting...'); process.exit(0) })
-// Catchall for URL 
+
+    // Catchall for URL 
 zinc.get('*', function (err, req, res, next) { res.sendfile(path.join(__dirname, zn.server.client)) })
 // Api Starts Here
 zinc.use('/api', require('./bin/zinc.api'), function (err, req, res, next) { res.send(err); msg.log(msg, error = err)})
