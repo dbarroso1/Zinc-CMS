@@ -1,3 +1,4 @@
+// Zinc Server Configuration variables
 var config = {
     development: {
         url: 'http://zinc-dev.com',
@@ -9,7 +10,8 @@ var config = {
         },
         server: {
             host: '127.0.0.1',
-            port: '3000'
+            port: '3000',
+            client: './public/dist'
         }
     },
     production: {
@@ -21,8 +23,13 @@ var config = {
         },
         server: {
             host: '127.0.0.1',
-            port: '4200'
+            port: '4200',
+            client: './public/src'
         }
+    },
+    api: {
+        message: 'Zinc Api Works!',
+        version: '0.1.2'
     }
-};
+}
 module.exports = config;
